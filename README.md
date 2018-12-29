@@ -1,7 +1,7 @@
 # FlowJoStatPlot
 A python package (and eventual web app) to quickly plot summary statistics output from the FlowJo table editor.
 
-## Purpose
+## The Problem:
 Those who regularly analyze flow cytometry (FACS) experiments will be familiar with the following workflow:
 
 1. Gate your populations of interest
@@ -9,7 +9,9 @@ Those who regularly analyze flow cytometry (FACS) experiments will be familiar w
 3. Copy the table to an Excel spreadsheet
 4. Laboriously copy and manually reformat (usually transpose) these values into some statistical / graphing software such as GraphPad Prism
 
-Steps 3 and 4 are *repetetive, incredibly boring, and time-consuming*. For my workflow - and that of many others - this task should be easy to automate with Python!
+Steps 3 and 4 are *repetetive, incredibly boring, and time-consuming*. For my workflow - and that of many others - this task should be easy to automate with Python, but this doesn't appear to have been done yet.
+
+## The (Eventual) Solution:
 
 This repository will serve as a home for code related to this mission. Eventually, the usage should look something like this:
 
