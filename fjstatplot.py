@@ -100,13 +100,15 @@ def makePlots(df, filename):
                 ax = fig.add_subplot(2, 2, i % ppp + 1)
             sns.catplot(data=df, x="Group", y=var,
                         hue="Label", dodge=True, kind="bar",
+                        hue_order=np.sort(df['Label'].unique()),
                         linewidth=1.5, facecolor=(1, 0, 1, 0),
                         errcolor=".2", edgecolor="0.5",
                         errwidth=1.5,
                         capsize=0.2, ci="sd", ax=ax, legend=False)
             ax.legend()
             sns.swarmplot(data=df, x="Group", y=var,
-                          hue="Label", dodge=True, s=8, ax=ax)
+                          hue="Label", dodge=True, s=8, ax=ax,
+                          hue_order=np.sort(df['Label'].unique()))
             ax.set_title(var)
             if (i + 1) % ppp == 0:
                 pdf.savefig(fig)
